@@ -693,3 +693,37 @@ Disassembly of section .text:
  540:	05010113          	add	sp,sp,80
  544:	00008067          	ret
 ```
+
+### different instruction in assembly code
+
+```
+Number of different instructions: 26
+List of unique instructions:
+and
+sub
+zext.b
+sw
+seqz
+divu
+or
+jalr
+nop
+bne
+blt
+lw
+add
+beq
+j
+beqz
+xor
+remu
+bgeu
+sll
+li
+bnez
+sltiu
+auipc
+mv
+ret
+
+```
