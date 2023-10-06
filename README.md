@@ -33,7 +33,7 @@ Access the riscv32-unknown-elf-gcc inside bin folder of riscv32-toolchain folder
 
 ### 2 Player Arcade Game
 
-![arcade_game(./Images/arcade_game.png)
+![arcade_game](./Images/arcade_game.png)
 
 **Description**
 2 Palyer Arcade game is a physically interactive fun game where people will play very enthusiastically. here as shown in the above figure the game contains "10x5" led matrix and two push buttions where each user uses a push button to continuously press to increase the number of led's of the user colour.when the green and the red leds meet they collide and the upper hand here between the two colours is the  user colour that came in first. Finally the user who has more rate of pressing the push button, will have all the leds lit up with the user colour and the user wins. There will be a buzzer sound to indicate that the game has ended and the new game has started
