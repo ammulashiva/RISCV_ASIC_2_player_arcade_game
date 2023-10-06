@@ -44,10 +44,18 @@ Access the riscv32-unknown-elf-gcc inside bin folder of riscv32-toolchain folder
 
 ### Functionality -
 
-- Here the microcontroller samples the user input on every loop and checks weather the user input status(pressed or released) is changed or not . 1 will be transmitted if button is pressed and 0 is transmitted if button is released.
+- In this architecture the microcontroller samples the user input on every loop and checks weather the user input status(pressed or released) is changed or not . 1 will be transmitted if button is pressed and 0 is transmitted if button is released.
 - In the middle of the loop if the status of the button changes from '0' to '1' then led count value of that particular user is incremented.
 - If the push bution status stays constant then no change is done on the led count variables.
 - Here a variable incr_en is used to signify that the push buttion status is changed and you can increment the user count variable.
-- 
--  
+- The above mentioned logic is mandatory to ensure that every time user presses the key once only one led is incremented.
+- When both leds collide led count variables are incremented or decremented based on which user input is given respectively.
+- here led counts are initialised with 0 and 51 for user 1 and 2 respectively.
+- if user 1 presses the button then count 1 is incremented and if user 2 presses the key then count 2 is decremented .
+- the user with all the leds as the same user colour wins.
+- A buzzer sound is provided which beeps three times with a second delay each to indicate that the previous game has ended and new game starts after the 3 beeps so users should get ready to play in the mean time.
+  
+### Flow Chart
+
+
 
