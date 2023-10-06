@@ -40,4 +40,4 @@ Access the riscv32-unknown-elf-gcc inside bin folder of riscv32-toolchain folder
 
 ### Block Diagram
 
-![Block_diagram](./Images/Block_diagram.png)
+//![Block_diagram](./Images/Block_diagramj/mn.png)
