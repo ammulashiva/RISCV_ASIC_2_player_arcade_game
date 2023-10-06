@@ -57,5 +57,4 @@ Access the riscv32-unknown-elf-gcc inside bin folder of riscv32-toolchain folder
   
 ### Flow Chart
 
-
-
+![flow_chart](./Images/flow_chart.png)
