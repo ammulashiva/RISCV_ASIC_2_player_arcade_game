@@ -40,4 +40,14 @@ Access the riscv32-unknown-elf-gcc inside bin folder of riscv32-toolchain folder
 
 ### Block Diagram
 
-//![Block_diagram](./Images/Block_diagram.png)
+![Block_diagram](./Images/Block_diagram.png)
+
+### Functionality -
+
+- Here the microcontroller samples the user input on every loop and checks weather the user input status(pressed or released) is changed or not . 1 will be transmitted if button is pressed and 0 is transmitted if button is released.
+- In the middle of the loop if the status of the button changes from '0' to '1' then led count value of that particular user is incremented.
+- If the push bution status stays constant then no change is done on the led count variables.
+- Here a variable incr_en is used to signify that the push buttion status is changed and you can increment the user count variable.
+- 
+-  
+
