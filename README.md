@@ -322,6 +322,8 @@ void delay(unsigned int delay_ms)
 
 
 ```
+![Screenshot from 2023-10-25 17-23-06](https://github.com/ammulashiva/RISCV_ASIC_2_player_arcade_game/assets/140998900/efd8b1a1-4867-41b3-98bf-c640fcff05bf)
+
 ### simulation commands used and the result are as follows :
 ```
 ammula-shiva-kumar@ammula-shiva-kumar-HP-Laptop-15-da1xxx:~$ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o out arcadespike1.c
