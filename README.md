@@ -699,7 +699,7 @@ Input_Key_1 = 0 ,  Input_Key_2 = 0
 ammula-shiva-kumar@ammula-shiva-kumar-HP-Laptop-15-da1xxx:~$ 
 
 ```
-
+In the simulation here input_key_1 and input_key_2 keys are the user inputs respectively . When the LED_count_1 = 50 or LED_count_2 = 0 game ends . here LED_count_1 = 50 so the user 1 has won.now the buzzer is turned on for 500ms and the LED_counter values are resetted to new game, after 1000ms 3 times buzzer is turned on and off with 1000ms as time period to indicate that the new game is gonna start and user needs to be get ready in 3seconds.
 ### code
 
 ```
