@@ -322,7 +322,7 @@ void delay(unsigned int delay_ms)
 
 
 ```
-### simulation commands used are as follows :
+### simulation commands used and the result are as follows :
 ```
 ammula-shiva-kumar@ammula-shiva-kumar-HP-Laptop-15-da1xxx:~$ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o out arcadespike1.c
 ammula-shiva-kumar@ammula-shiva-kumar-HP-Laptop-15-da1xxx:~$ spike pk out
