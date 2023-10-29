@@ -1257,3 +1257,15 @@ li
 - here when the program starts LED_count_1 will be instianted with a value of '0' and LED_count_2 will be instiantiated with a value of '51' or '33' in hexadecimal.
 - based on the inputs the values of the LED_count changes respectively to that of Key.
 - When the game ends the buzzer beeps to indicate that the present game has ended and a new game will start.
+
+ ### References
+ 
+1. https://github.com/SakethGajawada/RISCV_GNU
+ 
+2. https://circuitdigest.com/microcontroller-projects/keypad-interfacing-with-8051-microcontroller
+ 
+3. https://www.circuitstoday.com/interfacing-seven-segment-display-to-8051
+
+4. https://github.com/riscv-collab/riscv-gnu-toolchain
+
+5. https://github.com/riscv-software-src/riscv-isa-sim
