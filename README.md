@@ -1253,3 +1253,7 @@ li
 
 ![arcade_simu](./Images/arcade_simu.png)
 
+- Here in the simulation Key_1 and Key_2 are the two user input keys respecrivelycorresponding to LED_count_1 and LED_count_2, timer_in is the 1khz input from the 555 timer to form delays, buzzer is an output which is given to a buzzer which beeps when there is an input of logic one.
+- here when the program starts LED_count_1 will be instianted with a value of '0' and LED_count_2 will be instiantiated with a value of '51' or '33' in hexadecimal.
+- based on the inputs the values of the LED_count changes respectively to that of Key.
+- When the game ends the buzzer beeps to indicate that the present game has ended and a new game will start.
