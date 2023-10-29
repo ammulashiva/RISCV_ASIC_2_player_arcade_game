@@ -1249,3 +1249,7 @@ nop
 li
 
 ```
+### GTK Wave Simulation:
+
+![arcade_simu](./Images/arcade_simu.png)
+
