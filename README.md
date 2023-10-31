@@ -1258,6 +1258,11 @@ li
 - based on the inputs the values of the LED_count changes respectively to that of Key.
 - When the game ends the buzzer beeps to indicate that the present game has ended and a new game will start.
 
+![arcade_1](./Images/arcade_1.png)
+![arcade_2](./Images/arcade_2.png)
+
+- When the input Key_1 and Key_2 changes from logic '0' to logic '1' the count increment or decrement occurs using instructions "sub" and "addi" instructions and the display function is called which shifts the count variable to appropriate bits and adds the bits to the 'x30' register using the 'or' instruction in the display function.  
+
  ### References
  
 1. https://github.com/SakethGajawada/RISCV_GNU
