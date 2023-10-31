@@ -1261,7 +1261,51 @@ li
 ![arcade_1](./Images/arcade_1.png)
 ![arcade_2](./Images/arcade_2.png)
 
-- When the input Key_1 and Key_2 changes from logic '0' to logic '1' the count increment or decrement occurs using instructions "sub" and "addi" instructions and the display function is called which shifts the count variable to appropriate bits and adds the bits to the 'x30' register using the 'or' instruction in the display function.  
+- When the input Key_1 and Key_2 changes from logic '0' to logic '1' the count increment or decrement occurs using instructions "sub" and "addi" instructions and the display function is called which shifts the count variable to appropriate bits and adds the bits to the 'x30' register using the 'or' instruction in the display function.
+
+### Gate Level Simulation :
+
+ Steps to follow to peform GLS:
+  
+  1. Comment out the data & instruction memory modules in processor.v and make sure writing_inst_done=0 for uart.
+  
+  2. Use following yosyscommands to synthesize gate level netlist with uart module for ASIC flow. I have kept the required lib & sram verilog files in lib folder. Since, I have more than 256 instructions, I use 2kb SRAM library files and verilog modules.
+  
+  ```
+  yosys> read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> read_verilog processor.v
+  yosys> synth -top wrapper
+  yosys> dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> write_verilog synth_processor_asic.v
+  ```
+  
+  We see the SRAM macro being used in synthesizing processor.
+  
+  ![synth_processor](./Images/synth_processor.png)
+  
+  We verify UART functionality in this netlist which is used in further ASIC flow in openlane.
+  
+  3. Now to perform GLS we make sure in processor.v that writing_inst_done=1 to bypass uart during simulation.
+  
+  4. Use above said yosys commands to synthesize GLS simulation netlist. I have kept the required lib & sram verilog files in lib folder. Since, I have more than 256 instructions, I use 2kb SRAM library files and verilog modules.
+  
+  ```
+  yosys> read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> read_verilog processor.v
+  yosys> synth -top wrapper
+  yosys> dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> write_verilog synth_processor_gls.v
+  ```
+  
+  
+  We perform GLS using following iverilog command by including sram modules and related sky130 primitives.
+  
+  ```
+  verilog -o output_gls testbench.v synth_processor_gls.v ./lib/sky130_sram_1kbyte_1rw1r_32x512_8.v ./lib/sky130_fd_sc_hd.v ./lib/primitives.v 
+  ./output_gls
+  ```
 
  ### References
  
