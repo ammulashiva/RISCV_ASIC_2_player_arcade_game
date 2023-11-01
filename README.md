@@ -1299,7 +1299,9 @@ li
   yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_512.lib
   yosys> write_verilog synth_processor_gls.v
   ```
-  
+  ![arcade_synth](./Images/arcade_synth.png)
+
+  ![arcade_abc](./Images/arcade_abc.png)
   
   We perform GLS using following iverilog command by including sram modules and related sky130 primitives.
   
