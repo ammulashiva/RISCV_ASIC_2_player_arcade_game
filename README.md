@@ -1292,11 +1292,11 @@ li
   4. Use above said yosys commands to synthesize GLS simulation netlist. I have kept the required lib & sram verilog files in lib folder. Since, I have more than 256 instructions, I use 2kb SRAM library files and verilog modules.
   
   ```
-  yosys> read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_512.lib
   yosys> read_verilog processor.v
   yosys> synth -top wrapper
-  yosys> dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
-  yosys> abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_512.lib
+  yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_512.lib
   yosys> write_verilog synth_processor_gls.v
   ```
   
