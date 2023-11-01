@@ -1312,6 +1312,14 @@ li
 
   ```
 
+
+### Acknolodgement
+
+1. Kunal Ghosh, VSD Corp. Pvt. Ltd.
+ 
+2. Mayank Kabra (Founder, Chipcron Pvt. Ltd.)
+
+
  ### References
  
 1. https://github.com/SakethGajawada/RISCV_GNU
