@@ -1283,7 +1283,7 @@ li
   
   We see the SRAM macro being used in synthesizing processor.
   
-  ![synth_processor](./Images/synth_processor.png)
+   ![arcade_synth](./Images/arcade_synth.png)
   
   We verify UART functionality in this netlist which is used in further ASIC flow in openlane.
   
@@ -1298,8 +1298,8 @@ li
   yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_512.lib
   yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_512.lib
   yosys> write_verilog synth_processor_gls.v
+
   ```
-  ![arcade_synth](./Images/arcade_synth.png)
 
   ![arcade_abc](./Images/arcade_abc.png)
   
