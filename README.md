@@ -1304,8 +1304,10 @@ li
   We perform GLS using following iverilog command by including sram modules and related sky130 primitives.
   
   ```
-  verilog -o output_gls testbench.v synth_processor_gls.v ./lib/sky130_sram_1kbyte_1rw1r_32x512_8.v ./lib/sky130_fd_sc_hd.v ./lib/primitives.v 
-  ./output_gls
+  verilog -o test testbench.v synth_processor_gls_test.v sky130_sram_1kbyte_1rw1r_32x512_8.v sky130_fd_sc_hd.v primitives.v 
+  ./test
+  gtkwave waveform.vcd
+
   ```
 
  ### References
