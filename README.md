@@ -1324,7 +1324,7 @@ li
 
 Place and Route (PnR) is the core of any ASIC implementation and Openlane flow integrates into it several key open source tools which perform each of the respective stages of PnR. Below are the stages and the respective tools that are called by openlane for the functionalities as described:
 
-![image](https://user-images.githubusercontent.com/110079648/187492890-1c91bb6d-596e-47da-b4c6-592d25bbec10.png)
+![pyd1](./Images/pyd1.png)
 
 Below are the stages and the respective tools that are called by openlane for the functionalities as described:
 
@@ -1373,7 +1373,7 @@ make mount
 % prep -design project -verbose 99
 
 ```
-![Screenshot from 2023-11-12 23-41-36](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/84b3ae77-455a-4625-a82c-0c67e69e2d6d)
+![prep_design](./Images/prep_design.png)
 
 
 ## synthesis 
@@ -1390,11 +1390,11 @@ To synthesize the code run the following command
 run_synthesis
 
 ```
-![Screenshot from 2023-11-12 23-42-22](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/ca571f4d-7c76-4e98-82a3-a941958927b3)
+![synthesis](./Images/synthesis.png)
 
 **Statistics after synthesis**
 
-![Screenshot from 2023-11-12 23-48-57](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/03422281-d55f-40d2-b9a1-7e46d313d6d3)
+![synth_dff_rpt](./Images/synth_dff_rpt.png)
 
 
 # Floorplan
@@ -1411,7 +1411,7 @@ Following command helps to run floorplan
 ```
 % run_floorplan
 ```
-![Screenshot from 2023-11-12 23-42-39](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/34864a41-9b77-417a-8494-13fcbcab9ae3)
+![arcade_simu0](./Images/arcade_simu0.png)
 
 
 - Post the floorplan run, a .def file will have been created within the results/floorplan directory. We may review floorplan files by checking the floorplan.tcl.
@@ -1421,16 +1421,16 @@ Following command helps to run floorplan
 magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
 
 ```
-![Screenshot from 2023-11-13 10-48-10](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/f68bdef4-b968-44ed-9cda-b6ad9f45931f)
+![floorplan_mag](./Images/floorplan_mag.png)
 
 
 ## Die area (post floor plan)
 
-![Screenshot from 2023-11-12 23-16-39](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/b94e94d7-1719-4976-abf4-a14b92ea4421)
+![die_area_rpt](./Images/die_area_rpt.png)
 
 ## Core area (post floor plan)
 
-![Screenshot from 2023-11-12 23-16-51](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/c99dcf26-d0bb-41e9-954c-49b495efa5c2)
+![core_area_rpt](./Images/core_area_rpt.png)
 
 # Placement
 
