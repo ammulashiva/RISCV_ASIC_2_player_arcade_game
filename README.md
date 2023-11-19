@@ -1370,7 +1370,7 @@ sed -i's/max_transition   :0.04/max_transition   :0.75/g'*/*.lib
 make mount
 %./flow.tcl -interactive
 % package require openlane 0.9
-% prep -design project -verbose 99
+% prep -design project
 
 ```
 ![prep_design](./Images/prep_design.png)
@@ -1418,7 +1418,8 @@ Following command helps to run floorplan
 - To view the floorplan: Magic is invoked after moving to the results/floorplan directory,then use the floowing command:
   
 ```
-magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+magic -T /home/ammula-shiva-kumar/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+
 
 ```
 ![floorplan_mag](./Images/floorplan_mag.png)
@@ -1449,8 +1450,9 @@ run_placement
 ![placemen_cmd](./Images/placemen_cmd.png)
 
 Post placement: the design can be viewed on magic within results/placement directory. Run the follwing command in that directory:
+
 ```
-magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+magic -T /home/ammula-shiva-kumar/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
 
 ```
 ![placement_mag](./Images/placement_mag.png)
@@ -1516,7 +1518,8 @@ Fast Route generates the routing guides, whereas Triton Route uses the Global Ro
 - Layout in magic tool post routing: the design can be viewed on magic within `results/routing` directory. Run the follwing command in that directory:
   
 ```
-magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+magic -T /home/ammula-shiva-kumar/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+
 
 ```
 #### layout after Routing
@@ -1542,13 +1545,10 @@ magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f
 
 ![routing_power](./Images/routing_power.png)
 
-**Here drc violation is zero:**
-
-![violation0](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/f34b15cd-752b-4d0d-9062-b5d5aa587773)
 
 ## Performance Calculation
 
-Given a Clock period of 50ns in Json file , setup slack we got after routing is 13.21ns
+Given a Clock period of 40ns in Json file , setup slack we got after routing is 10.35ns
 
 ```
                               1
@@ -1557,39 +1557,9 @@ Max Performance =  ------------------------
 ```
 
 ```
-Max Performance = 0.0271 Ghz
+Max Performance = 337 Mhz
 ```
-### Extras
 
-![Screenshot from 2023-11-13 00-32-21](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/a5ab2ea7-a202-4a6a-a60d-df5d9101b466)
-
-# OpenLane Interactive Flow:
-```
-cd Desktop/OpenLane/ 
-
-./flow.tcl -interactive
-package require openlane 0.9
-prep -design project
-run_synthesis
-run_floorplan
-run_placement
-run_cts
-gen_pdn
-run_routing
-run_magic
-run_magic_spice_export
-run_magic_drc
-run_antenna_check
-
-```
-# OpenLane Non-Interactive Flow:
-
-```
-cd Desktop/OpenLane 
-make mount
-./flow.tcl -design project
-
-```
 
 
 ## Word of Thanks
