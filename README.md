@@ -1411,7 +1411,7 @@ Following command helps to run floorplan
 ```
 % run_floorplan
 ```
-![arcade_simu0](./Images/arcade_simu0.png)
+![floor-plan_cmd](./Images/floor-plan_cmd.png)
 
 
 - Post the floorplan run, a .def file will have been created within the results/floorplan directory. We may review floorplan files by checking the floorplan.tcl.
@@ -1426,11 +1426,11 @@ magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f
 
 ## Die area (post floor plan)
 
-![die_area_rpt](./Images/die_area_rpt.png)
+![die_area_rpt1](./Images/die_area_rpt1.png)
 
 ## Core area (post floor plan)
 
-![core_area_rpt](./Images/core_area_rpt.png)
+![core_area_rpt1](./Images/core_area_rpt1.png)
 
 # Placement
 
@@ -1446,14 +1446,14 @@ run the following command to run the placement
 ```
 run_placement
 ```
-![Screenshot from 2023-11-12 23-58-10](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/de05a2d2-96d3-43a4-a5f6-415729c407bf)
+![placemen_cmd](./Images/placemen_cmd.png)
 
 Post placement: the design can be viewed on magic within results/placement directory. Run the follwing command in that directory:
 ```
 magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
 
 ```
-![Screenshot from 2023-11-12 23-26-08](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/3a52e0b1-e527-499d-93c6-3e3fb630cbb2)
+![placement_mag](./Images/placement_mag.png)
 
 # CTS
 
@@ -1466,23 +1466,18 @@ Run the following command to perform CTS
 run_cts
 
 ```
-![Screenshot from 2023-11-12 23-45-56](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/ff138649-ba40-4f59-b815-c824d3234fd1)
 
 ## Timing Reports
 
-![Screenshot from 2023-11-13 00-12-14](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/d2ef5ec8-a7a2-4d41-8bd7-7b0228f613ba)
+![cts_timing_rpt](./Images/cts_timing_rpt.png)
 
 ## AREA Reports
 
-![Screenshot from 2023-11-13 00-11-52](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/892ff0cd-bd78-4fe3-a61e-a9e1a786e853)
+![cts_area_rpt](./Images/cts_area_rpt.png)
 
-## Skew Reports
+## Skew Reports and power report
 
-![Screenshot from 2023-11-13 00-11-36](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/e98914cf-9291-494d-ae47-7c7cd10f9360)
-
-## Power Reports
-
-![Screenshot from 2023-11-13 00-11-14](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/0a7fc0b6-0a1e-42b9-8cc0-d9185d32fec8)
+![cts_power_skew_rpt](./Images/cts_power_skew_rpt.png)
 
 # Routing
 
@@ -1505,7 +1500,7 @@ Run the following command to run the routing
 ```
 % run_routing
 ```
-![Screenshot from 2023-11-13 00-18-46](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/b844ac23-6dcb-4ffa-b9c9-af7d1ce45a3c)
+![routing_cmd](./Images/routing_cmd.png)
 
 
 **In routing stage**
@@ -1526,9 +1521,9 @@ magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f
 ```
 #### layout after Routing
 
-![Screenshot from 2023-11-12 03-36-36](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/4e5325e2-5a9a-46ad-b0b1-5a3f8f17550e)
+![routing_mag](./Images/routing_mag.png)
 
-![Screenshot from 2023-11-12 03-36-51](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/2454bcff-0547-40e6-8f5b-cb5f4c8bca1c)
+![cts_timing_rpt](./Images/cts_timing_rpt.png)
 
 **Area of Design**
 
