@@ -1523,24 +1523,24 @@ magic -T /home/parallels/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f
 
 ![routing_mag](./Images/routing_mag.png)
 
-![cts_timing_rpt](./Images/cts_timing_rpt.png)
+![routing_mag1](./Images/routing_mag1.png)
 
 **Area of Design**
 
-![Screenshot from 2023-11-13 00-25-24](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/4b235681-4569-4e48-8917-ba00d6e4f140)
+![mag_tkcon](./Images/mag_tkcon.png)
 
 ### post_routing Timing Reports
 
-![Screenshot from 2023-11-13 00-36-52](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/cb5f1cb4-2068-43fe-b8ca-c1a506612072)
+![routing_tns_rpt](./Images/routing_tns_rpt.png)
 
 ### post_routing Area Reports
 
-![Screenshot from 2023-11-13 00-37-05](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/f66b6ea0-777c-4e91-832f-c2f53948efb8)
+![routing_area](./Images/routing_area.png)
 
 
 ### post_routing Power Reports
 
-![Screenshot from 2023-11-13 00-36-34](https://github.com/alwinshaju08/IIITB_Waterlevel_detector/assets/69166205/49387bf6-c2d2-4864-a88b-b23d4c7523c3)
+![routing_power](./Images/routing_power.png)
 
 **Here drc violation is zero:**
 
