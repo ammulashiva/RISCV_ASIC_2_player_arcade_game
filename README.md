@@ -1397,7 +1397,7 @@ run_synthesis
 ![synthesis](./Images/synthesis.png)
 
 **Statistics after synthesis**
-
+![synth_dff_rpt](./Images/synt_dff_rpt.png)
 
 
 # Floorplan
